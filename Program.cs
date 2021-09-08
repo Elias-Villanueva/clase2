@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using Jugadores;
 
 namespace clase2
@@ -7,11 +7,16 @@ namespace clase2
     {
         static void Main(string[] args)
         {
-           Jugador jug1 = new Jugador("Elesito", 21, true);
-           Jugador jug2 = new Jugador("Efesito", 28);
-           Jugador jug3 = new Jugador("Enanito", 30, true);
+            Arma arma1 = new Arma("Cañon Laser", 100 );
+            Arma arma2 = new Arma("Misil", 100);
+            Arma arma3 = new Arma("Pistola", 20);
 
-           Console.WriteLine(jug2.IsActivo());
+            List<Arma> Armas = new List<Arma>() {arma1, arma2, arma3};
+
+           Jugador jug1 = new Jugador("Elesito", 21, Armas, true);
+
+
+           
         }
     }
 }
