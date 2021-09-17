@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 using Jugadores;
 
 namespace clase2
@@ -13,10 +14,18 @@ namespace clase2
 
             List<Arma> Armas = new List<Arma>() {arma1, arma2, arma3};
 
-           Jugador jug1 = new Jugador("Elesito", 21, Armas, true);
+            Escudo escudo1 = new Escudo("Escudo Gris", 100);
+            Escudo escudo2 = new Escudo("Escudo Azul", 100);
+            Escudo escudo3 = new Escudo("Escudo Morado", 100);
+            Escudo escudo4 = new Escudo("Escudo Dorado", 100);
 
+            List<Escudo> Escudos = new List<Escudo>() {escudo1, escudo2, escudo3, escudo4};
 
+           Jugador jug1 = new Jugador("Elesito", 21, Armas, Escudos, true);
            
+
+           jug1.readEscudo(); 
+          
         }
     }
 }
